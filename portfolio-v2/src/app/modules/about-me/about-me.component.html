@@ -1,0 +1,15 @@
+<h2 class="fs-4 mt-5">About Me</h2>
+
+<div class="d-flex rounded-2 mb-5 w-75 contentCard">
+  <img
+    src="../../../assets/profile.jpg"
+    alt="profile_portrait"
+    class="w-25 h-auto rounded-start"
+  />
+
+  <div class="d-flex flex-column content mt-3">
+    <p *ngFor="let string of aboutMe" class="mb-3">
+      {{ string }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+.contentCard {
+  flex-direction: column;
+  
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.content {
+  max-width: 50%;
+  min-width: 12rem;
+
+  @include media-breakpoint-up(sm) {
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+  }
+}
+
+img {
+  min-width: 12rem;
+}
+

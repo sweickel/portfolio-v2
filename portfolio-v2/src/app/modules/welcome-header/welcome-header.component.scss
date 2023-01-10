@@ -1,0 +1,112 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+// Animations
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    opacity: 40%;
+  }
+  100% {
+    margin-left: -7rem;
+    opacity: 0%;
+  }
+}
+
+@keyframes slideMobile {
+  0% {
+    margin-left: 0;
+  }
+  25% {
+    opacity: 40%;
+  }
+  100% {
+    margin-left: -4.25rem;
+    opacity: 0%;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    top: -4rem;
+  }
+  50% {
+    top: -3rem;
+    opacity: 0%;
+  }
+  75% {
+    opacity: 50%;
+  }
+  100% {
+    top: -1.5rem;
+    opacity: 100%;
+  }
+}
+
+.title {
+  position: relative;
+  min-width: 0rem;
+  opacity: 0;
+  animation: appear 3s;
+  animation-fill-mode: forwards;
+  font-size: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.title--world {
+  position: relative;
+  animation: slideMobile 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  font-size: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+    animation: slide 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    font-size: 2.5rem;
+  }
+}
+
+.titleSuffix {
+  opacity: 0;
+  animation-timing-function: linear;
+  animation: appear 3s;
+  animation-fill-mode: forwards;
+  transition-duration: 1s;
+  animation-delay: 2.5s;
+  font-size: 1.5rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2.5rem;
+  }
+}
+
+.secondaryTitle {
+  position: relative;
+  opacity: 0;
+  animation-timing-function: linear;
+  animation: slideDown 2.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.25s;
+  font-size: 0.9rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.15rem;
+  }
+}

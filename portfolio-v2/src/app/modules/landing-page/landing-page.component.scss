@@ -1,0 +1,30 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+// Elements
+.contactButton {
+  align-self: flex-end;
+  @include media-breakpoint-down(md) {
+
+  }
+}
+
+.layout {
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    width: auto;
+    background-color: #f8f8f8;
+    grid-template-columns: 6rem auto;
+    column-gap: 3rem;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 10rem auto;
+  }
+}
