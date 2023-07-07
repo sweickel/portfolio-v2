@@ -1,15 +1,26 @@
-<h2 class="fs-4 mt-5">About Me</h2>
+<h2 class="fs-4 mt-4">About Me</h2>
 
-<div class="d-flex rounded-2 mb-5 w-75 contentCard">
+<div class="d-flex rounded-2 w-100 contentCard align-items-start justify-content-stretch">
   <img
     src="../../../assets/profile.jpg"
     alt="profile_portrait"
-    class="w-25 h-auto rounded-start"
+    class="w-25 h-auto rounded mb-3"
   />
 
-  <div class="d-flex flex-column content mt-3">
-    <p *ngFor="let string of aboutMe" class="mb-3">
+  <div class="d-flex flex-column content">
+    <p *ngFor="let string of aboutMe" class="mb-4">
       {{ string }}
     </p>
   </div>
+</div>
+
+<mat-divider class="mt-4 w-25"></mat-divider>
+<div class="socialIcons d-flex mt-2">
+  <a href="https://www.linkedin.com/in/sean-weickel/">
+    <img class="linkedIn" src="../../../assets/LinkedIn_Logo.svg" alt="LinkedIn Icon">
+  </a>
+
+  <a href="https://www.github.com/sweickel/">
+    <img src="../../../assets/GitHub_Logo.png" lt="GitHub Icon">
+  </a>
 </div>

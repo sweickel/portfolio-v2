@@ -5,6 +5,7 @@
 
 :root {
   scroll-behavior: smooth;
+  
 }
 
 // Elements
@@ -12,10 +13,10 @@
   div {
     min-width: 15.625rem;
   }
-
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 
   @include media-breakpoint-up(sm) {
     display: grid;
@@ -23,10 +24,24 @@
     background-color: #f8f8f8;
     grid-template-columns: 7rem auto;
     column-gap: 3rem;
+    justify-content: flex-start;
   }
   
   @include media-breakpoint-up(lg) {
     grid-template-columns: 10rem auto;
   }
+
+  .headerDivider {
+    width: 50%;
+
+    @include media-breakpoint-up(sm) {
+      width: 25%;
+    }
+  }
+}
+
+.mainContent {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
