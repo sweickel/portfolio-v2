@@ -1,3 +1,18 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
 .callToAction {
   box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.12);
+  max-width: 65rem;
+  display: grid;
+  grid-template-columns: auto;
+  
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 5rem auto;  
+  }
+}
+
+.icon {
+  height: 4rem;
 }

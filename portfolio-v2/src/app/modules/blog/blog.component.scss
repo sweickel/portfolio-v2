@@ -1,0 +1,45 @@
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/mixins/_breakpoints";
+
+.blogCard {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.12);
+  
+  img {
+    display: none;
+  }
+
+  @include media-breakpoint-up(sm) {
+    img {
+      display: block;
+    }
+
+    display: grid;
+    grid-template-columns: 10rem auto;
+    box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.12);
+  }
+}
+
+.articles {
+  @include media-breakpoint-up(sm) {
+    max-width: 30rem;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 55rem;
+  }
+}
+
+.btn {
+  width: 100%;
+
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    align-self: flex-end!important;
+  }
+}
