@@ -20,7 +20,7 @@
   @include media-breakpoint-up(md) {
     height: auto;
     display: grid;
-    grid-template-columns: 10rem auto;
+    grid-template-columns: 12rem auto;
     box-shadow: 0 0 .75rem 0 rgba(0, 0, 0, 0.12);
   }
 }
@@ -50,5 +50,19 @@
 
   @include media-breakpoint-up(xl) {
     grid-template-columns: 1fr 1fr;
+  }
+
+  img {
+    max-width: 10rem;
+    height: auto;
+    max-height: 8rem;
+  }
+
+  .left {
+    background-color: lightblue;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
