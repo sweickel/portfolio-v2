@@ -1,14 +1,19 @@
 <h2 class="fs-4 mt-4">Latest Posts</h2>
 
 <div class="articles">
-  <div *ngFor="let article of articles" class="rounded flex blogCard rounded-end w-100 mb-3">
-    <div class="flex flex-column align-items-center justify-content-center w-100">
-      <img src="../../../assets/gear.png" alt="gear" class="w-100 rounded-start">
+  <ng-container *ngIf="articles.length > 0; else noRecentArticles">
+    <div *ngFor="let article of articles" class="rounded flex blogCard rounded-end w-100 mb-3">
+      <div class="flex flex-column align-items-center justify-content-center w-100">
+        <img src="{{ article.imageLocation }}" alt="gear" class="w-100 rounded-start">
+      </div>
+      <div class="card-body bg-white rounded-end m-1 p-2 mb-0 d-flex flex-column align-items-start justify-content-between">
+        <h4 class="card-title mb-1">{{ article.title }}</h4>
+        <p class="card-text">{{ article.description }}</p>
+        <a href="{{ article.button.url }}" class="btn btn-primary align-self-start mb-2 ms-2">{{ article.button.text }}</a>
+      </div>
     </div>
-    <div class="card-body bg-white rounded-end m-1 p-2 mb-0 d-flex flex-column align-items-start justify-content-between">
-      <h4 class="card-title mb-1">Card Title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary align-self-start mb-2 ms-2">Go somewhere</a>
-    </div>
-  </div>
+  </ng-container>
+  <ng-template #noRecentArticles>
+    <p>There are no recent articles.  Check back with us soon for more content!</p>
+  </ng-template>
 </div>
