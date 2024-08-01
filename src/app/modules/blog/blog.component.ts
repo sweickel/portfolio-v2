@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { snippets } from '../../../articles';
+import { snippets } from '../../../assets/articles';
 
 export interface Article {
   title: string;

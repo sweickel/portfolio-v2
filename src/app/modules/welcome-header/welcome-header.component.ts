@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './welcome-header.component.html',
   styleUrls: ['./welcome-header.component.scss']
 })
-export class WelcomeHeaderComponent {
-
-}
+export class WelcomeHeaderComponent {}
