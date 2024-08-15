@@ -11,6 +11,7 @@ import { AboutMeComponent } from './modules/about-me/about-me.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { BlogComponent } from './modules/blog/blog.component';
 import { ProjectsComponent } from './modules/projects/projects.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,8 @@ import { ProjectsComponent } from './modules/projects/projects.component';
         BrowserAnimationsModule,
         MatSidenavModule,
         MatDividerModule,
+        RouterOutlet,
+        RouterModule
     ]
 })
 export class AppModule { }
